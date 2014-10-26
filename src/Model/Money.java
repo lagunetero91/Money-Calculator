@@ -1,3 +1,8 @@
+package Model;
+
+
+import Model.Currency;
+
 public class Money {
 private final int amount;
 private final Currency my_currency;

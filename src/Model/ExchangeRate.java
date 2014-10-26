@@ -1,3 +1,8 @@
+package Model;
+
+
+import Model.Currency;
+
 public class ExchangeRate {
 private final Currency from;
 private final Currency to;

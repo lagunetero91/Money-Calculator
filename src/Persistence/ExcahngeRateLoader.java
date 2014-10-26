@@ -1,3 +1,8 @@
+package Persistence;
+
+
+import Model.ExchangeRate;
+
 public class ExcahngeRateLoader {
 private final ExchangeRate exchangeRate;
 
