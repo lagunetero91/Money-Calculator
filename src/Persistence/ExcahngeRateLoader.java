@@ -11,6 +11,7 @@ private final ExchangeRate exchangeRate;
     }
 
     public ExchangeRate load(){
+        
         return null;
     }
 }

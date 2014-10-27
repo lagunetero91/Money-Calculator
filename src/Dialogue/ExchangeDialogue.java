@@ -1,19 +1,25 @@
 package Dialogue;
 
+import Model.Currency;
 import Model.Money;
 
 public class ExchangeDialogue {
     int amount;
-    int currency;
+    Currency currency;
+
+    public ExchangeDialogue(int amount, Currency currency) {
+        this.amount = amount;
+        this.currency = currency;
+    }
 
     public void setAmount(int amount) {
         this.amount = amount;
     }
 
-    public void setCurrency(int currency) {
+    public void setCurrency(Currency currency) {
         this.currency = currency;
     }
-    
-    Money money= new Money(amount,currency);
-    
-}
+     
+    public void execute(){
+    }
+    }
