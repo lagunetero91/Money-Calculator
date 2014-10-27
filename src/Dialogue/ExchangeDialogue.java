@@ -1,15 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package Dialogue;
 
-/**
- *
- * @author David
- */
+import Model.Money;
+
 public class ExchangeDialogue {
+    int amount;
+    int currency;
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public void setCurrency(int currency) {
+        this.currency = currency;
+    }
+    
+    Money money= new Money(amount,currency);
     
 }
