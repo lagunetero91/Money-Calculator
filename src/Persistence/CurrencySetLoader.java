@@ -11,8 +11,8 @@ private final Currency currency;
     }
     
     public Currency Load(){
-        Currency Euro = new Currency (1,"Euro","E");
-        Currency Dolar = new Currency(2,"Dolar","D");
+        Currency Euro = new Currency (1,"Euro","€");
+        Currency Dolar = new Currency(2,"Dolar","$");
         return null;
     }
 }

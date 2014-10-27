@@ -4,10 +4,10 @@ import java.util.HashMap;
 
 public class CurrencySet {
   
-    HashMap <String,Currency> conjunto = new HashMap<>();
+    HashMap <String,Currency> set = new HashMap<>();
     
-    public Currency getCurrency(){
-        return null;
+    public Currency getCurrency(String key){
+        return set.get(key);
         }
     
 }
