@@ -12,6 +12,10 @@ private final Currency my_currency;
         this.my_currency = my_currency;
     }
 
+    public Money(int amount, int currency) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public int getAmount() {
         return amount;
     }

@@ -10,7 +10,7 @@ private final Currency currency;
         this.currency = currency;
     }
     
-    public Currency Load (){
+    public Currency Load(){
         return null;
     }
 }
