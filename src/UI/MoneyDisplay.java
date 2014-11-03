@@ -9,8 +9,6 @@ public class MoneyDisplay {
       
     }
     private Exchange ReadExchange(){
-        ExchangeDialogue dialog =new ExchangeDialogue();
-        dialog.execute();
-        return dialog;
+        return null;
     }
 }

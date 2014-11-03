@@ -3,10 +3,10 @@ package Persistence;
 
 import Model.ExchangeRate;
 
-public class ExcahngeRateLoader {
+public class ExchangeRateLoader {
 private final ExchangeRate exchangeRate;
 
-    public ExcahngeRateLoader(ExchangeRate exchangeRate) {
+    public ExchangeRateLoader(ExchangeRate exchangeRate) {
         this.exchangeRate = exchangeRate;
     }
 

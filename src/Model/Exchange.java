@@ -2,19 +2,19 @@ package Model;
 
 public class Exchange {
     private final Money money;
-    private final ExchangeRate exchangeRate;
+    private final Currency currency;
 
-    public Exchange(Money money, ExchangeRate exchangeRate) {
+    public Exchange(Money money, Currency currency) {
         this.money = money;
-        this.exchangeRate = exchangeRate;
+        this.currency = currency;
     }
 
     public Money getMoney() {
         return money;
     }
 
-    public ExchangeRate getExchangeRate() {
-        return exchangeRate;
+    public Currency getCurrency() {
+        return currency;
     }
     
 }
