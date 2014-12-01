@@ -1,7 +1,7 @@
 
 package UI;
 
-import Dialogue.ExchangeDialogue;
+import Dialogue.ExchangeDialog;
 import Model.Exchange;
 
 public class MoneyDisplay {
