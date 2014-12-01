@@ -1,5 +1,6 @@
 package Persistence;
 import Model.Currency;
+import Model.CurrencySet;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +13,7 @@ private final Connection connection;
         this.connection = connection;
     }
     
-    public Currency[] load(){
+    public CurrencySet load(){
         try{
             return processQuery(connection.createStatement().executeQuery("SELECT * FROM currencys"));
             
