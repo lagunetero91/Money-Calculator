@@ -9,6 +9,8 @@ import java.util.ArrayList;
 public class CurrencySetLoader {
 private final Connection connection;
 
+private final CurrencySet set = new CurrencySet();
+
     public CurrencySetLoader(Connection connection) {
         this.connection = connection;
     }
@@ -25,11 +27,11 @@ private final Connection connection;
     private Currency[] processQuery(ResultSet resultSet) throws SQLException{
         ArrayList<Currency> currencySet = new ArrayList<>();
         while(resultSet.next())
-            currencySet.add(processPeron(resultSet));
+            currencySet.add(processCurrency(resultSet));
         return currencySet.toArray(new Currency[currencySet.size()]);
     }
 
-    private Currency processPeron(ResultSet resultSet) throws SQLException {
+    private Currency processCurrency(ResultSet resultSet) throws SQLException {
     return new Currency(
         new Integer(resultSet.getString("code")),
         resultSet.getString("name"),
