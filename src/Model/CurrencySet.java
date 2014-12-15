@@ -1,10 +1,9 @@
 package Model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class CurrencySet {
-    private final ArrayList <Currency> set = new ArrayList<Currency>();
+    private final ArrayList <Currency> set = new ArrayList<>();
     
     
     public Currency getCurrency(int indice){
