@@ -22,4 +22,6 @@ private final String simbol;
     public String getSimbol() {
         return simbol;
     }
+    
+    
 }

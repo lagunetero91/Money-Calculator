@@ -7,7 +7,7 @@ public class ExchangeRate {
 private final Currency from;
 private final Currency to;
 private int rate;
-  public ExchangeRate(Currency from, Currency to) {
+  public ExchangeRate(Currency from, Currency to, int rate) {
         this.from = from;
         this.to = to;
     }
@@ -21,6 +21,10 @@ private int rate;
 
     public Currency getTo() {
         return to;
+    }
+
+    public int getRate() {
+        return rate;
     }
 
   
