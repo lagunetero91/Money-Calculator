@@ -22,6 +22,11 @@ private final String simbol;
     public String getSimbol() {
         return simbol;
     }
+
+    @Override
+    public String toString() {
+        return "Currency{" + "name=" + name + '}';
+    }
     
     
 }
