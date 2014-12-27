@@ -12,7 +12,8 @@ import javax.swing.JTextField;
 public class ExchangeDialogPanel extends JPanel implements ExchangeDialog{
     private final CurrencySet currencySet;
 
-    public ExchangeDialogPanel(){
+    public ExchangeDialogPanel(CurrencySet currencySet){
+        this.currencySet=currencySet;
         this.add(createAmountField());
         this.add(createSourceCurrencyField());
         this.add(createTargetCurrencyField());

@@ -1,6 +1,7 @@
 package Persistence;
 
 
+import Model.Currency;
 import Model.ExchangeRate;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -29,8 +30,11 @@ public class ExchangeRateLoader {
         return ExchangeRateSet.toArray(new ExchangeRate[ExchangeRateSet.size()]);
     }
 
-    private ExchangeRate processExchangeRate(ResultSet resultSet) {
-        return null;
+    private ExchangeRate processExchangeRate(ResultSet resultSet, Currency from, Currency to) throws SQLException {
+        return new ExchangeRate(
+        from,
+        to,
+        Integer.parseInt(resultSet.getString("rate")));
      
     }
 }
