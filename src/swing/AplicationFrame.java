@@ -52,4 +52,8 @@ public class AplicationFrame  extends JFrame{
         this.add(createExchangePanel());
        // this.add(createMoneyPanel());
         this.add(createCalculateButton()); }
+
+    public void register(ActionListener actionListener) {
+        this.actionListener=actionListener;
+    }
     }
