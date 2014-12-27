@@ -50,6 +50,6 @@ public class AplicationFrame  extends JFrame{
 
     private void createWidgets() {
         this.add(createExchangePanel());
-        this.add(createMoneyPanel());
+       // this.add(createMoneyPanel());
         this.add(createCalculateButton()); }
     }
