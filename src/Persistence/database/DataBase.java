@@ -1,12 +1,12 @@
 package Persistence.database;
 import Model.Currency;
 import Model.CurrencySet;
+import Persistence.CurrencySetLoader;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
-public class DataBase {
+public class DataBase implements CurrencySetLoader{
 private final Connection connection;
 
 private final CurrencySet set = new CurrencySet();
@@ -15,20 +15,21 @@ private final CurrencySet set = new CurrencySet();
         this.connection = connection;
     }
     
+    @Override
     public CurrencySet load(){
         try{
             return processQuery(connection.createStatement().executeQuery("SELECT * FROM currencys"));
             
         }catch(SQLException ex){
-            return new Currency[0];
+            return new CurrencySet();
         }
     }
     
-    private Currency[] processQuery(ResultSet resultSet) throws SQLException{
-        ArrayList<Currency> currencySet = new ArrayList<>();
+    private CurrencySet processQuery(ResultSet resultSet) throws SQLException{
+        CurrencySet currencySet = new CurrencySet();
         while(resultSet.next())
-            currencySet.add(processCurrency(resultSet));
-        return currencySet.toArray(new Currency[currencySet.size()]);
+            currencySet.addCurrency(processCurrency(resultSet));
+        return currencySet;
     }
 
     private Currency processCurrency(ResultSet resultSet) throws SQLException {
