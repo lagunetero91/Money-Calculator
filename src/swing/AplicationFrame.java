@@ -56,4 +56,8 @@ public class AplicationFrame  extends JFrame{
     public void register(ActionListener actionListener) {
         this.actionListener=actionListener;
     }
+    
+    public ExchangeDialog getDialog(){
+        return exchangeDialog;
+    }
     }
