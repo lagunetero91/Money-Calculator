@@ -13,6 +13,7 @@ public class aplication {
     public static void main (String [] Args){
         CurrencySet currencySet= new CurrencySet();
         AplicationFrame frame = new AplicationFrame(currencySet);
+        frame.setVisible(true);
         frame.register(new ActionListener(){
 
             @Override
