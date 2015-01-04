@@ -5,6 +5,7 @@ import Model.Currency;
 import Model.CurrencySet;
 import Model.Exchange;
 import Model.Money;
+import java.awt.PopupMenu;
 import java.awt.event.InputMethodEvent;
 import java.awt.event.InputMethodListener;
 import javax.swing.JComboBox;
@@ -16,42 +17,37 @@ public class ExchangeDialogPanel extends JPanel implements ExchangeDialog{
 
     public ExchangeDialogPanel(CurrencySet currencySet){
         this.currencySet=currencySet;
-        this.add(createAmountField());
+        this.createWidget();
         //this.add(createSourceCurrencyField());
        // this.add(createTargetCurrencyField());
     }
 
-    private JTextField createAmountField() {
-        JTextField text = new JTextField();
-        text.addInputMethodListener(new InputMethodListener(){
-
-            @Override
-            public void inputMethodTextChanged(InputMethodEvent event) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public void caretPositionChanged(InputMethodEvent event) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-                
-        
-                
-            
-        });
-        return text;
-    }
-
-    private JComboBox<Currency> createSourceCurrencyField() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private JComboBox<Currency> createTargetCurrencyField() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public Exchange getExchange() {
         return null;
+    }
+
+    private void createWidget() {
+        this.add(amountWidget());
+        this.add(fromCurrencyWidget());
+        this.add(toCurrencyWidget());
+    }
+
+    private JTextField amountWidget() {
+        JTextField amount = new JTextField();
+        amount.setColumns(15);
+        return amount;
+    }
+
+    private JComboBox fromCurrencyWidget() {
+        JComboBox<Currency> box = new JComboBox<>(currencySet.toArray());
+        return box;
+    }
+
+    private JComboBox toCurrencyWidget() {
+        JComboBox<Currency> box = new JComboBox<>(currencySet.toArray());
+        return box;    
     }
 }

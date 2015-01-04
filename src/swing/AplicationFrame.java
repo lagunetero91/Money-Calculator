@@ -2,6 +2,8 @@ package swing;
 
 import Dialogue.ExchangeDialog;
 import Model.CurrencySet;
+import static java.awt.BorderLayout.NORTH;
+import static java.awt.BorderLayout.SOUTH;
 import java.awt.Component;
 import java.awt.PopupMenu;
 import java.awt.event.ActionEvent;
@@ -50,8 +52,8 @@ public class AplicationFrame  extends JFrame{
 
     private void createWidgets() {
         this.add(createExchangePanel());
-       // this.add(createMoneyPanel());
-        this.add(createCalculateButton()); }
+        this.add(createCalculateButton(),SOUTH);
+    }
 
     public void register(ActionListener actionListener) {
         this.actionListener=actionListener;

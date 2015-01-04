@@ -27,9 +27,12 @@ private final CurrencySet set = new CurrencySet();
     
     private CurrencySet processQuery(ResultSet resultSet) throws SQLException{
         CurrencySet currencySet = new CurrencySet();
-        while(resultSet.next())
+        while(resultSet.next()){
             currencySet.addCurrency(processCurrency(resultSet));
-        return currencySet;
+        }
+            Currency Euro = new Currency(1,"Euro","E");
+            currencySet.addCurrency(Euro);
+            return currencySet;
     }
 
     private Currency processCurrency(ResultSet resultSet) throws SQLException {

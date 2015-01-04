@@ -15,19 +15,19 @@ public class ExchangeRateLoader {
     }
     
 
-    public ExchangeRate[] load(){
+    public ExchangeRate load(Currency from, Currency to){
         try{
-           return processQuery(connection.createStatement().executeQuery("SELECT * FROM exchange")); 
+           return processQuery(connection.createStatement().executeQuery(
+                   "SELECT * FROM exchangeRate"+
+                   "WHERE from=" +from+ 
+                   "AND to="+ to)); 
         }catch(SQLException ex){
-        return new ExchangeRate [0];
+        return null;
     }
 }
 
-    private ExchangeRate[] processQuery(ResultSet resultSet) throws SQLException {
-        ArrayList<ExchangeRate> ExchangeRateSet = new ArrayList<>();
-        while(resultSet.next())
-            ExchangeRateSet.add(processExchangeRate(resultSet));
-        return ExchangeRateSet.toArray(new ExchangeRate[ExchangeRateSet.size()]);
+    private ExchangeRate processQuery(ResultSet resultSet) throws SQLException {
+        return processExchangeRate(resultSet);
     }
 
     private ExchangeRate processExchangeRate(ResultSet resultSet, Currency from, Currency to) throws SQLException {
