@@ -20,6 +20,7 @@ public class AplicationFrame  extends JFrame{
         this.currencySet=currencySet;
         this.setTitle("Moneycalculator");
         this.setSize(500,500);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.createWidgets();  
     }
 
@@ -29,9 +30,6 @@ public class AplicationFrame  extends JFrame{
         return panel;
     }
 
-    private PopupMenu createMoneyPanel() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     private JButton createCalculateButton() {
         JButton button = new JButton ("Calculate Exchange");
