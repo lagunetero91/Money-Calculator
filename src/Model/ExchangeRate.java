@@ -6,12 +6,12 @@ import Model.Currency;
 public class ExchangeRate {
 private final Currency from;
 private final Currency to;
-private int rate;
-  public ExchangeRate(Currency from, Currency to, int rate) {
+private Double rate;
+  public ExchangeRate(Currency from, Currency to, Double rate) {
         this.from = from;
         this.to = to;
     }
-    public void setRate(int rate) {
+    public void setRate(double rate) {
         this.rate = rate;
     }
 
@@ -23,7 +23,7 @@ private int rate;
         return to;
     }
 
-    public int getRate() {
+    public double getRate() {
         return rate;
     }
 

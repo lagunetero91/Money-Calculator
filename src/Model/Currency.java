@@ -1,17 +1,17 @@
 package Model;
 
 public class Currency {
-private final int code;
+private final String code;
 private final String name;
 private final String simbol;
 
-    public Currency(int code, String name, String simbol) {
+    public Currency(String code, String name, String simbol) {
         this.code = code;
         this.name = name;
         this.simbol = simbol;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
             

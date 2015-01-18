@@ -10,7 +10,7 @@ public class ExchangeOperation {
     }
     
     public void execute(){
-        
+        exchangeDialog.setLabel("" + exchangeDialog.getExchange().getMoney().getAmount()*exchangeDialog.getExchangeRate().getRate());
     }
     
 }

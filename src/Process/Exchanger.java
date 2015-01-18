@@ -9,7 +9,7 @@ public class Exchanger {
         return new Money(rateCalculator(money,exchangeRate),exchangeRate.getTo());
     }
     
-    public int rateCalculator(Money money,ExchangeRate exchangeRate){
+    public double rateCalculator(Money money,ExchangeRate exchangeRate){
         return money.getAmount() * exchangeRate.getRate();
         
     }

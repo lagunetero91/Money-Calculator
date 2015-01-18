@@ -2,6 +2,7 @@ package swing;
 
 import Dialogue.ExchangeDialog;
 import Model.CurrencySet;
+import Model.ExchangeRate;
 import static java.awt.BorderLayout.NORTH;
 import static java.awt.BorderLayout.SOUTH;
 import java.awt.Component;
@@ -15,8 +16,10 @@ public class AplicationFrame  extends JFrame{
     private ExchangeDialog exchangeDialog;
     private final CurrencySet currencySet;
     private ActionListener actionListener;
+    private final ExchangeRate exchangeRate;
     
-    public AplicationFrame(CurrencySet currencySet) {
+    public AplicationFrame(CurrencySet currencySet,ExchangeRate exchangeRate) {
+        this.exchangeRate=exchangeRate;
         this.currencySet=currencySet;
         this.setTitle("Moneycalculator");
         this.setSize(500,500);
@@ -25,7 +28,7 @@ public class AplicationFrame  extends JFrame{
     }
 
     private Component createExchangePanel() {
-        ExchangeDialogPanel panel = new ExchangeDialogPanel(currencySet);
+        ExchangeDialogPanel panel = new ExchangeDialogPanel(currencySet,exchangeRate);
         this.exchangeDialog= panel;
         return panel;
     }
